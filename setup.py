@@ -14,7 +14,7 @@ setup(
     long_description='',
     license='Apache License 2.0',
     keywords='ansible',
-    url='https://github.com/nawazmyasir/awx-custom-credential-plugin-example',
+    url='https://github.com/nawazmyasir/erpm',
     packages=['erpm'],
     include_package_data=True,
     zip_safe=False,
