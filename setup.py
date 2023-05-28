@@ -2,7 +2,7 @@
 
 from setuptools import setup
 
-requirements = ['urllib3', 'json']  # add Python dependencies here
+requirements = []  # add Python dependencies here
 # e.g., requirements = ["PyYAML"]
 
 setup(
