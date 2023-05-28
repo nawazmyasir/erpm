@@ -2,12 +2,12 @@
 
 from setuptools import setup
 
-requirements = []  # add Python dependencies here
+requirements = ['urllib3', 'json']  # add Python dependencies here
 # e.g., requirements = ["PyYAML"]
 
 setup(
     name='erpm',
-    version='0.1',
+    version='0.2',
     author='Ansible, Inc.',
     author_email='info@ansible.com',
     description='',
