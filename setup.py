@@ -7,7 +7,7 @@ requirements = []  # add Python dependencies here
 
 setup(
     name='erpm',
-    version='0.2',
+    version='0.3',
     author='Ansible, Inc.',
     author_email='info@ansible.com',
     description='',
