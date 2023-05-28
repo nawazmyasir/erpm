@@ -71,7 +71,7 @@ erpm_plugin = CredentialPlugin(
             'label': 'ERPM Password',
             'type': 'string',
             'secret': True,
-            'help_text': 'The Password to login to ERPM System.'
+            
         },{
             'id': 'system_name',
             'label': 'System Name',
@@ -84,7 +84,7 @@ erpm_plugin = CredentialPlugin(
             'help_text': 'The name of the Account in ERPM System to fetch password.'
         },{
             'id': 'shared_credential_list',
-            'label': 'Shared Credential Liste',
+            'label': 'Shared Credential List',
             'type': 'string',
             'help_text': 'The name of the Shared Credential List in ERPM System to fetch.'
         },{
