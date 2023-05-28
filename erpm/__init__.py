@@ -10,9 +10,8 @@ def get_password(**kwargs):
     # (*this* code is just provided for the sake of example)
     #
     url = kwargs.get('url')
-    username = kwargs.get('username')
-    password = kwargs.get('password')
-    
+    erpm_username = kwargs.get('erpm_username')
+    erpm_password = kwargs.get('erpm_password')
     account_name = kwargs.get('account_name')
     shared_credential_list = kwargs.get('shared_credential_list')
     system_name = kwargs.get('system_name')
@@ -58,32 +57,46 @@ erpm_plugin = CredentialPlugin(
     inputs={
         'fields': [{
             'id': 'url',
-            'label': 'ERPM Server URL',
+            'label': 'ERPM Base URL',
             'type': 'string',
+            'help_text': 'The Base URL of ERPM System.'
         },{
-            'id': 'password',
-            'label': 'Password',
+            'id': 'erpm_username',
+            'label': 'ERPM Username',
             'type': 'string',
             'secret': True,
+            'help_text': 'The Username to login to ERPM System.'
+        },{
+            'id': 'erpm_password',
+            'label': 'ERPM Password',
+            'type': 'string',
+            'secret': True,
+            'help_text': 'The Password to login to ERPM System.'
         },{
             'id': 'system_name',
             'label': 'System Name',
             'type': 'string',
+            'help_text': 'The name of the System in ERPM to fetch password.'
         },{
             'id': 'account_name',
             'label': 'Account Name',
             'type': 'string',
+            'help_text': 'The name of the Account in ERPM System to fetch password.'
         },{
             'id': 'shared_credential_list',
             'label': 'Shared Credential Liste',
             'type': 'string',
-        }],
-        'metadata': [{
-            'id': 'shared_credential_list',
-            'label': 'Share Credential List Name',
-            'type': 'string',
             'help_text': 'The name of the Shared Credential List in ERPM System to fetch.'
+        },{
+        'id' : 'comment',
+        'label': 'Comment',
         }],
+        #'metadata': [{
+            #'id': 'shared_credential_list',
+            #'label': 'Share Credential List Name',
+            #'type': 'string',
+            #'help_text': 'The name of the Shared Credential List in ERPM System to fetch.'
+        #}],
         'required': ['url', 'username', 'password', 'account_name', 'shared_credential_list', 'system_name'],
     },
     # backend is a callable function which will be passed all of the values
