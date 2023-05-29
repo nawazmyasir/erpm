@@ -91,13 +91,24 @@ erpm_plugin = CredentialPlugin(
         'id' : 'comment',
         'label': 'Comment',
         }],
-        #'metadata': [{
-            #'id': 'shared_credential_list',
-            #'label': 'Share Credential List Name',
-            #'type': 'string',
-            #'help_text': 'The name of the Shared Credential List in ERPM System to fetch.'
-        #}],
-        'required': ['url', 'erpm_username', 'erpm_password', 'account_name', 'shared_credential_list', 'system_name'],
+        'metadata': [{
+            'id': 'shared_credential_list',
+            'label': 'Share Credential List Name',
+            'type': 'string',
+            'help_text': 'The name of the Shared Credential List in ERPM System to fetch.'
+        },{
+            'id': 'account_name'
+            'label': 'Account Name'
+            'type' : 'string'
+            'help_test' : 'The name of Account in system'
+        },{
+             'id': 'system_name'
+            'label': 'System Name'
+            'type' : 'string'
+            'help_test' : 'The name of System'
+        }],
+        'required': ['url', 'erpm_username', 'erpm_password'],
+        #'required': ['url', 'erpm_username', 'erpm_password', 'account_name', 'shared_credential_list', 'system_name'],
     },
     # backend is a callable function which will be passed all of the values
     # defined in `inputs`; this function is responsible for taking the arguments,
